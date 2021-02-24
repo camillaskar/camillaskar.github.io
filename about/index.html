@@ -1,7 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-  <!DOCTYPE html>
   <title>About me</title>
 
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -10,6 +9,33 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="1561.61">
   <style type="text/css">
+  * Add a black background color to the top navigation */
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgb(178, 233, 221);
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #267028;
+  color: white;
+}
     p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 12.0px Times; color: #000000; -webkit-text-stroke: #000000}
 
     p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Helvetica; color: #dcdcdc; -webkit-text-stroke: #dcdcdc; background-color: #1e1e1e}
@@ -28,8 +54,14 @@
     .p2 {
   font-family: Arial, Helvetica, sans-serif;
 }
+   
     </style>
 
+ <div class="topnav">
+  <a>Home</a>
+  <a href="education">Education</a>
+  <a class="active" href="about">About me</a>
+</div>
     </head>
 
     <body>
