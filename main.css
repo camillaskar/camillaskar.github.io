@@ -12,9 +12,9 @@ body{
    }
 h1{
   background-color:#d9cef1;
-animation: mymove 0.7s infinite;
+animation: slide 0.7s infinite;
 }
-
+/*
 #slide {
   position: absolute;
   left: -600px;
@@ -29,7 +29,7 @@ animation: mymove 0.7s infinite;
 @-webkit-keyframes slide {
   100% { left: 0; }
 }
-
+*/
 @keyframes slide {
   100% { left: 0; }
 }
