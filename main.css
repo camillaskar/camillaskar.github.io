@@ -11,9 +11,29 @@ body{
     background-color: #aed6c6;
    }
 h1{
-  background-color:#d3e8e0;
-
+  background-color:#d9cef1;
+animation: slide 0.7s forwards;
 }
+/*animation stuff
+#slide {
+  position: absolute;
+  left: -600px;
+  width: 600px;
+  height: 370px;
+  background: blue;
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+} */
+@-webkit-keyframes slide {
+  100% { left: 0; }
+}
+
+@keyframes slide {
+  100% { left: 0; }
+}
+
 /* Add a black background color to the top navigation */
 .topnav {
 background-color: #333;
