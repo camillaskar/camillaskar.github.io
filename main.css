@@ -58,7 +58,7 @@ img:hover {
 }
 @keyframes changeOpacity {
   from {opacity:0; 
-  background-color: rgb(238, 180, 207);
+  background-color: rgb(178, 233, 221);
 }
   to {opacity:1;
     background-color: #e6e9e7;
