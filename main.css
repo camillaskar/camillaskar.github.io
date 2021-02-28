@@ -8,11 +8,24 @@ span.s2 {font-kerning: none; color: #9b9b9b; -webkit-text-stroke: 0px #9b9b9b}
 span.s3 {font-kerning: none; color: #569cd6; -webkit-text-stroke: 0px #569cd6}
 span.s4 {font-kerning: none; color: #9cdcfe; -webkit-text-stroke: 0px #9cdcfe}
 body{
-    background-color: #aed6c6;
+    background-color: #e6e9e7;
    }
 h1{
   background-color:#d9cef1;
-animation: slide 0.7s infinite;
+animation: changeOpacity 2s forwards;
+}
+
+img {
+  opacity: 1.0;
+  filter: alpha(opacity=40);
+  animation: slide 1s backwards;
+  cursor: pointer;
+}
+
+img:hover {
+  opacity: 0.7;
+  filter: alpha(opacity=100);
+  cursor: pointer;
 }
 /*
 #slide {
@@ -30,13 +43,29 @@ animation: slide 0.7s infinite;
   100% { left: 0; }
 }
 */
+
 @keyframes slide {
-  100% { left: 0; }
+  from {margin-left:-100%;
+  }
+  to {margin-left:0%;
+  }
 }
+
+
 @keyframes mymove {
-  from {background-color: rgb(145, 46, 92);}
-  to {background-color: rgb(243, 204, 207);}
+  from {background-color: rgb(63, 10, 35);}
+  to {background-color: rgb(189, 90, 98);}
 }
+@keyframes changeOpacity {
+  from {opacity:0; 
+  background-color: rgb(238, 180, 207);
+}
+  to {opacity:1;
+    background-color: #e6e9e7;
+  }
+  }
+
+
 /* Add a black background color to the top navigation */
 .topnav {
 background-color: #333;
