@@ -16,10 +16,15 @@ animation: changeOpacity 2s forwards;
 }
 
 img {
+  border: 1px solid rgb(85, 84, 84);
   opacity: 1.0;
   filter: alpha(opacity=40);
   animation: slide 1s backwards;
   cursor: pointer;
+  box-shadow: 10px 10px 5px #ccc;
+      -moz-box-shadow: 10px 10px 5px #ccc;
+      -webkit-box-shadow: 10px 10px 5px #ccc;
+      -khtml-box-shadow: 10px 10px 5px #ccc;
 }
 
 img:hover {
