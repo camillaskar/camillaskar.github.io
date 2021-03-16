@@ -7,9 +7,9 @@ span.s1 {font-kerning: none}
 span.s2 {font-kerning: none; color: #9b9b9b; -webkit-text-stroke: 0px #9b9b9b}
 span.s3 {font-kerning: none; color: #569cd6; -webkit-text-stroke: 0px #569cd6}
 span.s4 {font-kerning: none; color: #9cdcfe; -webkit-text-stroke: 0px #9cdcfe}
-input{ 
-  background-color:#ffffff;
-border: 1px solid #babdbb;
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
 }
 body{
     background-color: #e6e9e7;
@@ -17,6 +17,20 @@ body{
 h1{
   background-color:#d9cef1;
 animation: changeOpacity 2s forwards;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 50%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
 }
 
 img {
@@ -36,23 +50,6 @@ img:hover {
   filter: alpha(opacity=100);
   cursor: pointer;
 }
-/*
-#slide {
-  position: absolute;
-  left: -600px;
-  width: 600px;
-  height: 370px;
-  background: blue;
-  -webkit-animation: slide 0.5s forwards;
-  -webkit-animation-delay: 2s;
-  animation: slide 0.5s forwards;
-  animation-delay: 2s;
-} 
-@-webkit-keyframes slide {
-  100% { left: 0; }
-}
-*/
-
 @keyframes slide {
   from {margin-left:-100%;
   }
@@ -114,9 +111,28 @@ color: white;
 }
 .center {   display: block;   margin-left: auto;   margin-right: auto;   width: 50%; }
 
-.container {position: absolute; margin: 0; width:100%; background: #f4f5f4; min-height: 600px; }
+input[type=text], input[type=password] {
+  width: 20%;
+  padding: 8px;
+  margin: 5px 0 8px 0;
+  border: none;
+  background: #f1f1f1;
+}
+input[type=names]{
+  width:70%;
+  padding: 8px;
+  margin: 5px 0 8px 0;
+  border: none;
+  background: #f1f1f1;
+}
 
-.white-box { width: 700px; height: 500px; margin-top: 50px; margin-left: auto; margin-right: auto;   
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.container {position: absolute; margin: 0; width:100%; background: #f4f5f4; min-height: 1000px; }
+
+.white-box { width: 1000px; height: 620px; margin-top: 50px; margin-left: auto; margin-right: auto;   
   
 background: rgba(255,255,255,0.9);
 padding: 30px;
