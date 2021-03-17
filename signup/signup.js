@@ -19,6 +19,19 @@
                 success.textContent = " ";
             }
             });
+        
+        let mycheck = document.getElementById("mycheck"); 
+        mycheck.addEventListener('change', function(e) {
+            if (e.target.checked){
+                inputpassword.type = "text";
+                inputconfirm.type = "text";
+                console.log("anything");
+            } else{
+                inputpassword.type = "password";
+                inputconfirm.type = "password";
+                console.log("not true"); 
+            }
+        });
 
     })();
     function checkLength(input){
@@ -30,6 +43,8 @@
         }
         return isZeroLength;
         };
+    
+
 
 
 
