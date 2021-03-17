@@ -13,8 +13,13 @@
 
         signup.addEventListener('click', function() {
             let success = document.getElementById("success");
-            if (!checkLength(inputname) && !checkLength(inputlast) && !checkLength(inputuser) && !checkLength(inputpassword) && !checkLength(inputconfirm)){
+            if (!isZeroLengths(inputname) && !isZeroLengths(inputlast) && !isZeroLengths(inputuser) && checkPassword(inputpassword) && checkConfirm (inputconfirm, inputpassword)){
                 success.textContent = "You have successfully registered!"; 
+                inputname.value = " "; 
+                inputlast.value = " "; 
+                inputuser.value = " "; 
+                inputpassword.value = " "; 
+                inputconfirm.value= " ";
             } else {
                 success.textContent = " ";
             }
@@ -34,7 +39,7 @@
         });
 
     })();
-    function checkLength(input){
+    function isZeroLengths(input){
         let isZeroLength = input.value.length == 0;
         if (isZeroLength){
             input.style.border = "2px solid #FF0000";
@@ -44,7 +49,28 @@
         return isZeroLength;
         };
     
+        function checkPassword(enter){
+            var letternumber = /[\s~`!@#$%\^&*+=\-\[\]\\';,/{}|\\":<>\?()\._]/g;
+            if (enter.value.length > 8){
+                if (enter.value.match(letternumber)){
+                    enter.style.border = "1px solid #babdbb";
+                    console.log("it works");
+                    return true;
+                }
+            } 
+            enter.style.border = "2px solid #FF0000";
+            return false;  
+        }
 
+    function checkConfirm(enterCon, enterPass){
+        console.log(enterCon.value + " ff  " + enterPass.value);
+        if (enterCon.value.match(enterPass.value)){
+            enterCon.style.border = "1px solid #babdbb";
+            return true;  
+        } 
+        enterCon.style.border = "2px solid #FF0000";
+            return false;  
+    }
 
 
 
